@@ -40,5 +40,5 @@ release:
         weight: 30
         metadata:
           labels:
-            app.kubernetes.io/version: v0
+            app.kubernetes.io/version: v1
     strategy: blue-green
