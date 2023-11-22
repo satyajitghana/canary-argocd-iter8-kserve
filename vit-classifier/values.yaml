@@ -22,4 +22,20 @@ release:
                   limits:
                     cpu: 2600m
                     memory: 3Gi
+      - inferenceServiceSpecification:
+          metadata:
+            labels:
+              app.kubernetes.io/version: v1
+          spec:
+            predictor:
+              minReplicas: 2
+              serviceAccountName: s3-read-only
+              model:
+                modelFormat:
+                  name: pytorch
+                storageUri: s3://tsai-emlo/kserve-ig-2/imagenet-vit/
+                resources:
+                  limits:
+                    cpu: 2600m
+                    memory: 3Gi
     strategy: blue-green
