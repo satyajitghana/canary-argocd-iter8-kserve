@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/satyajitghana/canary-argocd-iter8-kserve.git
+    repoURL: https://github.com/christianh814/kbe-apps.git
     targetRevision: HEAD
-    path: wisdom
+    path: 02-working-with-helm/repo
     helm:
       valueFiles:
         - values.yaml

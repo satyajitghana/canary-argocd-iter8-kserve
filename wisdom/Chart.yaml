@@ -1,9 +1,9 @@
 apiVersion: v2
-name: wisdom
-description: A Helm chart for Kubernetes
+name: quarkus-subchart
 type: application
 version: 1.0.0
+appVersion: "1.0.0"
 dependencies:
-- name: release
-  version: "0.18"
-  repository: "https://iter8-tools.github.io/iter8"
+- name: quarkus
+  version: 0.0.3
+  repository: https://redhat-developer.github.io/redhat-helm-charts
