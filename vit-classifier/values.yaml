@@ -14,7 +14,8 @@ release:
               model:
                 modelFormat:
                   name: pytorch
-                storageUri: s3://tsai-emlo/kserve-ig-2/indian-food-classifier/
+                # storageUri: s3://tsai-emlo/kserve-ig-2/indian-food-classifier/
+                storageUri: s3://tsai-emlo/kserve-ig-2/imagenet-vit/
                 resources:
                   limits:
                     cpu: 2600m
