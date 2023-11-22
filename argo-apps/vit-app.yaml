@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: wisdom
+  name: vit-classifier
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: https://github.com/christianh814/kbe-apps.git
+    repoURL: https://github.com/satyajitghana/canary-argocd-iter8-kserve.git
     targetRevision: HEAD
-    path: 02-working-with-helm/repo
+    path: vit-classifier
     helm:
       valueFiles:
         - values.yaml
