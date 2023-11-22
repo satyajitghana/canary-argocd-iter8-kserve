@@ -5,7 +5,6 @@ release:
       labels:
         app.kubernetes.io/name: wisdom
     modelFormat: sklearn
-    runtime: kserve-mlserver
     versions:
     - metadata:
         labels:
