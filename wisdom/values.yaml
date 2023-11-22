@@ -1,9 +1,13 @@
-quarkus:
-  build:
-    enabled: false
-  deploy:
-    route:
-      enabled: false
-    replicas: 3
-  image:
-    name: quay.io/redhatworkshops/gitops-helm-quarkus
+environment: kserve
+application: 
+  metadata:
+    labels:
+      app.kubernetes.io/name: wisdom
+  modelFormat: sklearn
+  runtime: kserve-mlserver
+  versions:
+  - metadata:
+      labels:
+        app.kubernetes.io/version: v0
+    storageUri: "gs://seldon-models/sklearn/mms/lr_model"
+  strategy: blue-green
