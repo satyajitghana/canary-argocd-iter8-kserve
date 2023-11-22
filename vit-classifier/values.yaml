@@ -7,10 +7,6 @@ release:
     modelFormat: pytorch
     versions:
       - inferenceServiceSpecification:
-          # weight: 70
-          # metadata:
-          #   labels:
-          #     app.kubernetes.io/version: v0
           spec:
             predictor:
               minReplicas: 2
@@ -28,10 +24,6 @@ release:
           labels:
             app.kubernetes.io/version: v0
       - inferenceServiceSpecification:
-          # weight: 30
-          # metadata:
-          #   labels:
-          #     app.kubernetes.io/version: v1
           spec:
             predictor:
               minReplicas: 2
