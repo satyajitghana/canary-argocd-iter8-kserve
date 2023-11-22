@@ -1,13 +1,14 @@
-environment: kserve
-application: 
-  metadata:
-    labels:
-      app.kubernetes.io/name: wisdom
-  modelFormat: sklearn
-  runtime: kserve-mlserver
-  versions:
-  - metadata:
+release:
+  environment: kserve
+  application: 
+    metadata:
       labels:
-        app.kubernetes.io/version: v0
-    storageUri: "gs://seldon-models/sklearn/mms/lr_model"
-  strategy: blue-green
+        app.kubernetes.io/name: wisdom
+    modelFormat: sklearn
+    runtime: kserve-mlserver
+    versions:
+    - metadata:
+        labels:
+          app.kubernetes.io/version: v0
+      storageUri: "gs://seldon-models/sklearn/mms/lr_model"
+    strategy: blue-green
