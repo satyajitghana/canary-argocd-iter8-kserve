@@ -7,6 +7,7 @@ release:
     modelFormat: pytorch
     versions:
       - inferenceServiceSpecification:
+          weight: 70
           metadata:
             labels:
               app.kubernetes.io/version: v0
@@ -23,6 +24,7 @@ release:
                     cpu: 2600m
                     memory: 3Gi
       - inferenceServiceSpecification:
+          weight: 30
           metadata:
             labels:
               app.kubernetes.io/version: v1
