@@ -7,10 +7,10 @@ release:
     modelFormat: pytorch
     versions:
       - inferenceServiceSpecification:
-          weight: 70
-          metadata:
-            labels:
-              app.kubernetes.io/version: v0
+          # weight: 70
+          # metadata:
+          #   labels:
+          #     app.kubernetes.io/version: v0
           spec:
             predictor:
               minReplicas: 2
@@ -23,11 +23,15 @@ release:
                   limits:
                     cpu: 2600m
                     memory: 3Gi
+        weight: 70
+        metadata:
+          labels:
+            app.kubernetes.io/version: v0
       - inferenceServiceSpecification:
-          weight: 30
-          metadata:
-            labels:
-              app.kubernetes.io/version: v1
+          # weight: 30
+          # metadata:
+          #   labels:
+          #     app.kubernetes.io/version: v1
           spec:
             predictor:
               minReplicas: 2
@@ -40,4 +44,8 @@ release:
                   limits:
                     cpu: 2600m
                     memory: 3Gi
+        weight: 30
+        metadata:
+          labels:
+            app.kubernetes.io/version: v0
     strategy: blue-green
